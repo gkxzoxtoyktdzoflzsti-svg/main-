@@ -12,6 +12,19 @@ This repository contains a small command-line game written in Python. The goal i
    ```
 3. Follow the on-screen prompts to enter guesses or type `q` to leave the round. After each round, choose whether to play again.
 
+You can also run a non-interactive demo round to see how the game works without typing input:
+
+```bash
+python game.py --guesses 20,50,75,63,68 --secret 68
+```
+
+### Command-line options
+
+- `--lower` / `--upper`: Set the bounds for the secret number (defaults: 1–100).
+- `--attempts`: Maximum number of attempts per round (default: 7).
+- `--secret`: Provide a fixed secret number—handy for demonstrations or practice.
+- `--guesses`: Comma-separated guesses for a scripted demo round (disables interactive prompts).
+
 ## Notes
 
 - Input validation helps prevent crashes from invalid entries.
